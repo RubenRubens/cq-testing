@@ -11,8 +11,8 @@ helix = cq.Workplane("XY").newObject([shape])
 
 # Final result. A circle sweeped along a helix.
 result = (
-	cq.Workplane('XZ')
-	.center(r, 0)
-	.circle(0.1)
-	.sweep(helix, isFrenet=True)
+    cq.Workplane('XZ')
+    .center(r, 0)
+    .circle(0.1)
+    .sweep(helix, isFrenet=True)
 )
