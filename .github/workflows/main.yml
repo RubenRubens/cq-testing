@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Authenticate in docker
+        run: docker login localhost:8080
+
       - name: Run docker compose
         run: docker-compose up
 
