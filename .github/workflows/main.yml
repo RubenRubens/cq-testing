@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Authenticate in docker
-        run: docker login -u RubenRubens -p 123
+        run: docker login docker.pkg.github.com -u RubenRubens -p ${{ secrets.DockerToken }}
 
       - name: Run docker compose
         run: docker-compose up
