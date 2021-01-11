@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  cad-query:
+    build: .
+    volumes:
+    - .:/testing
+    command: bash run-tests.sh
