@@ -18,6 +18,6 @@ jobs:
       - name: Authenticate in docker
         run: docker login docker.pkg.github.com -u RubenRubens -p ${{ secrets.DockerToken }}
 
-      - name: Run docker compose
+      - name: Testing 🔧
         run: docker-compose up
 
