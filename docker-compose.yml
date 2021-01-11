@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   cad-query:
-    build: .
+    image: docker.pkg.github.com/rubenrubens/cq-testing/cq-master:latest
     volumes:
     - .:/testing
     command: bash run-tests.sh
