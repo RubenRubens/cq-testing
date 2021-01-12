@@ -19,5 +19,5 @@ jobs:
         run: docker login docker.pkg.github.com -u RubenRubens -p ${{ secrets.DockerToken }}
 
       - name: Tests 🧪
-        run: docker-compose up
+        run: docker-compose run cad-query
 
