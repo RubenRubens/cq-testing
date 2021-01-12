@@ -6,8 +6,7 @@ h = 4 # Height of the helix
 
 # Helix
 wire = cq.Wire.makeHelix(pitch=p, height=h, radius=r)
-shape = cq.Wire.combine([wire])
-helix = cq.Workplane("XY").newObject([shape])
+helix = cq.Workplane(obj=wire)
 
 # Final result. A circle sweeped along a helix.
 result = (

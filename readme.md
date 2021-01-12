@@ -6,7 +6,7 @@ A black-boxed testing project to check the results of cadquery.
 
 You don't need any installation to use this project. Simply go to the **Actions** tab on github
 and check the latest output (you have to see something similar to [this](https://github.com/RubenRubens/cq-testing/runs/1687693936?check_suite_focus=true)). Once there open **Tests 🧪**. That's it.
-Notice that some tests have no output due to a time limit of 20 seconds to run each one.
+Notice that some tests have no output due to a time limit of 60 seconds to run each one.
 
 # How to use it in your local machine
 
@@ -21,7 +21,7 @@ $ docker-compose up
 # How it works
 
 There is a bash script that finds all python files that starts with _test_. Each of those tests are run
-using unittest with a timeout of 20 seconds to finish. This way, any code is prevented to run infinitely.
+using unittest with a timeout of 60 seconds. This way, any code is prevented to run infinitely.
 
 Tests can follow any structure as long as they live in a folder inside _src_. However there is a common
 pattern you might find. Tests start with multiple files that create an equal result using different
