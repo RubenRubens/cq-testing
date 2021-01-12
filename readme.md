@@ -6,7 +6,7 @@ A black-boxed testing project to check the results of cadquery.
 
 You don't need any installation to use this project. Simply go to the **Actions** tab on github
 and check the latest output (you have to see something similar to [this](https://github.com/RubenRubens/cq-testing/runs/1687693936?check_suite_focus=true)). Once there open **Tests 🧪**. That's it.
-Notice that some tests have no output due to a time limit of 20 seconds to run each test.
+Notice that some tests have no output due to a time limit of 20 seconds to run each one.
 
 # How to use it in your local machine
 
