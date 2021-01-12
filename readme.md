@@ -30,12 +30,12 @@ this using the `.box()` method and _HW2_ does it by creating a recta
 
 **HW1**
 
-```
+```python
 result = cq.Workplane().box(3, 4, 1, centered=(False,False,False))
 ```
 **HW2**
 
-```
+```python
 result = cq.Workplane().rect(3, 4, centered=False).extrude(1)
 ```
 
@@ -44,6 +44,6 @@ boolean operations and then measuring the volume. In this case, HW1 r
 `R1` and HW2 as `R2`. So we have to perform the difference of those and check that the volume
 is 0. Therefore, we have to test that `R1.cut(R2).val().Volume()` is equal to 0.
 
-Tests are run using a custom Docker image. Docker first clones the cadquery repo and then 
-installs a developer cadquery version (`conda env create -n cq -f environment.yml`). This docker
-image is then manually upload as github Package.
+Tests are run using a custom Docker image. The provided dockerfile first clones the cadquery repo
+and then installs a developer cadquery version (`conda env create -n cq -f environment.yml`). This
+docker image is then manually upload as a github Package.
