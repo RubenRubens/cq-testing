@@ -1,4 +1,4 @@
-# issue https://github.com/CadQuery/cadquery/issues/515
+# issue 515
 
 import cadquery as cq
 
