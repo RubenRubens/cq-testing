@@ -1,6 +1,8 @@
 # Update the docker image every monday
 # It is possible as well to trigger the update manually
 
+name: Update docker image
+
 on:
   schedule:
     - cron: '* * * * 1'
