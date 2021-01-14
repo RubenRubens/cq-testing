@@ -21,4 +21,4 @@ jobs:
         password: ${{ secrets.DockerToken }}
         registry: docker.pkg.github.com
         repository: rubenrubens/cq-testing/cq
-        tag_with_ref: true
+        tag_with_ref: false
