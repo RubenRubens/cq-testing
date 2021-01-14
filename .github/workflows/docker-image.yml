@@ -1,0 +1,22 @@
+# Update the docker image every monday
+# It is possible as well to trigger the update manually
+
+on:
+  schedule:
+    - cron: '* * * * 1'
+  workflow_dispatch:
+
+jobs:
+  docker-cq:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+    - name: Push to GitHub Packages
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ github.actor }}
+        password: ${{ secrets.DockerToken }}
+        registry: docker.pkg.github.com
+        repository: rubenrubens/cq-testing/cq
+        tag_with_ref: true
