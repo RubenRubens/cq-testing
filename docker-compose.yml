@@ -1,7 +1,12 @@
 version: "3.9"
 services:
-  cad-query:
+  all:
     image: docker.pkg.github.com/rubenrubens/cq-testing/cq
     volumes:
     - .:/testing
-    command: bash run-tests.sh
+    command: bash run-all-tests.sh
+  passing:
+    image: docker.pkg.github.com/rubenrubens/cq-testing/cq
+    volumes:
+    - .:/testing
+    command: bash run-passing-tests.sh

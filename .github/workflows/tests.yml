@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  passing-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,5 +19,16 @@ jobs:
         run: docker login docker.pkg.github.com -u RubenRubens -p ${{ secrets.DockerToken }}
 
       - name: Tests 🧪
-        run: docker-compose run cad-query
+        run: docker-compose run passing
 
+  all-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Authenticate in docker
+        run: docker login docker.pkg.github.com -u RubenRubens -p ${{ secrets.DockerToken }}
+
+      - name: Tests 🧪
+        run: docker-compose run all
