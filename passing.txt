@@ -17,6 +17,7 @@ src/cq_examples/test_ex019.py
 src/cq_examples/test_ex020.py
 src/cq_examples/test_ex021.py
 src/cq_examples/test_ex022.py
+src/cq_examples/test_ex023.py
 src/cq_examples/test_ex025.py
 src/cq_examples/test_ex100.py
 src/cq_examples/test_ex101.py
