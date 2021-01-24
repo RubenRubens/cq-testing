@@ -81,8 +81,8 @@ arcSweep = (
 
 
 # Translate the resulting solids so that they do not overlap and display them left to right
-# show_object(defaultSweep)
-# show_object(circletorectSweep.translate((0, 5, 0)))
-# show_object(recttocircleSweep.translate((0, 10, 0)))
-# show_object(specialSweep.translate((0, 15, 0)))
-# show_object(arcSweep.translate((0, -5, 0)))
+a = defaultSweep
+b = circletorectSweep.translate((0, 5, 0))
+c = recttocircleSweep.translate((0, 10, 0))
+d = specialSweep.translate((0, 15, 0))
+e = arcSweep.translate((0, -5, 0))

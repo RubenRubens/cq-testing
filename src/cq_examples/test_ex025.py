@@ -1,8 +1,8 @@
 import unittest
-import src.cq_examples.Ex024_Sweep_With_Multiple_Sections as ex
+import src.cq_examples.Ex025_Swept_Helix as ex
 
-class TestExample024(unittest.TestCase):
-    def test_Ex024(self):
+class TestExample025(unittest.TestCase):
+    def test_Ex025(self):
         # Import and validate
         R = ex.result
         self.assertTrue(R.val().isValid())

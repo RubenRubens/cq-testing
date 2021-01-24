@@ -29,8 +29,8 @@ path = cq.Workplane("XZ").threePointArc((1.0, 1.5), (0.0, 1.0))
 arcSweep = cq.Workplane("XY").circle(0.5).sweep(path)
 
 # Translate the resulting solids so that they do not overlap and display them left to right
-# show_object(defaultSweep)
-# show_object(frenetShell.translate((5, 0, 0)))
-# show_object(defaultRect.translate((10, 0, 0)))
-# show_object(plineSweep.translate((15, 0, 0)))
-# show_object(arcSweep.translate((20, 0, 0)))
+a = defaultSweep
+b = frenetShell.translate((5, 0, 0))
+c = defaultRect.translate((10, 0, 0))
+d = plineSweep.translate((15, 0, 0))
+e = arcSweep.translate((20, 0, 0))

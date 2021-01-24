@@ -9,7 +9,6 @@ surface_points = [[5.0, 5.0, 5.0]]
 plate_0 = cq.Workplane("XY").interpPlate(edge_points, surface_points, thickness)
 print("plate_0.val().Volume() = ", plate_0.val().Volume())
 plate_0 = plate_0.translate((0, 6 * 12, 0))
-# show_object(plate_0)
 
 # EXAMPLE 1
 # Plate with 5 sides and 2 bumps, one side is not co-planar with the other sides
@@ -36,7 +35,6 @@ surface_points = [[-3.0, -3.0, -3.0], [3.0, 3.0, 3.0]]
 plate_1 = cq.Workplane("XY").interpPlate(edge_wire, surface_points, thickness)
 # plate_1 = cq.Workplane("XY").interpPlate(edge_points, surface_points, thickness) # list of (x,y,z) points instead of wires for edges
 print("plate_1.val().Volume() = ", plate_1.val().Volume())
-# show_object(plate_1)
 
 # EXAMPLE 2
 # Embossed star, need to change optional parameters to obtain nice looking result.
@@ -75,7 +73,6 @@ plate_2 = cq.Workplane("XY").interpPlate(
 # plate_2 = cq.Workplane("XY").interpPlate(edge_points, surface_points, thickness, combine=True, clean=True, Degree=3, NbPtsOnCur=15, NbIter=2, Anisotropie=False, Tol2d=0.00001, Tol3d=0.0001, TolAng=0.01, TolCurv=0.1, MaxDeg=8, MaxSegments=49) # list of (x,y,z) points instead of wires for edges
 print("plate_2.val().Volume() = ", plate_2.val().Volume())
 plate_2 = plate_2.translate((0, 2 * 12, 0))
-# show_object(plate_2)
 
 # EXAMPLE 3
 # Points on hexagonal pattern coordinates, use of pushpoints.
@@ -144,7 +141,6 @@ plate_3 = (
 )
 print("plate_3.val().Volume() = ", plate_3.val().Volume())
 plate_3 = plate_3.translate((0, 4 * 11, 0))
-# show_object(plate_3)
 
 # EXAMPLE 4
 # Gyroïd, all edges are splines on different workplanes.
@@ -172,4 +168,3 @@ surface_points = [[0, 0, 0]]
 plate_4 = cq.Workplane("XY").interpPlate(edge_wire, surface_points, thickness)
 print("plate_4.val().Volume() = ", plate_4.val().Volume())
 plate_4 = plate_4.translate((0, 5 * 12, 0))
-# show_object(plate_4)

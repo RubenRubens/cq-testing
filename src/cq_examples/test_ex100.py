@@ -1,8 +1,8 @@
 import unittest
-import src.cq_examples.Ex025_Swept_Helix as ex
+import src.cq_examples.Ex100_Lego_Brick as ex
 
-class TestExample025(unittest.TestCase):
-    def test_Ex025(self):
+class TestExample100(unittest.TestCase):
+    def test_Ex100(self):
         # Import and validate
-        R = ex.result
+        R = ex.tmp
         self.assertTrue(R.val().isValid())

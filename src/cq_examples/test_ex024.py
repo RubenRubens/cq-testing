@@ -1,8 +1,11 @@
 import unittest
-import src.cq_examples.Ex023_Sweep as ex
+import src.cq_examples.Ex024_Sweep_With_Multiple_Sections as ex
 
-class TestExample023(unittest.TestCase):
-    def test_Ex023(self):
+class TestExample024(unittest.TestCase):
+    def test_Ex024(self):
         # Import and validate
-        R = ex.result
-        self.assertTrue(R.val().isValid())
+        self.assertTrue(ex.a.val().isValid())
+        self.assertTrue(ex.b.val().isValid())
+        self.assertTrue(ex.c.val().isValid())
+        self.assertTrue(ex.d.val().isValid())
+        self.assertTrue(ex.e.val().isValid())

@@ -1,5 +1,11 @@
 $a = Get-ChildItem -Path 'src/cq_examples' -Filter 'Ex*.py' | Resolve-Path -Relative
-$a | ForEach-Object {
+foreach ($path in $a) {
+
+    $module = $path.replace("./", "")
+    $module = $module.replace("/", ".")
+    $module = $module.replace(".py", "")
+    
+    $number = $path.replace("./src/cq_examples/Ex", "").SubString(0,3)
 
 $script = 
 @"
@@ -13,14 +19,9 @@ class TestExample$number(unittest.TestCase):
         self.assertTrue(R.val().isValid())
 "@
 
-    $module = $_.replace("./", "")
-    $module = $module.replace("/", ".")
-    $module = $module.replace(".py", "")
-    
-    $number = $_.replace("./src/cq_examples/Ex", "").SubString(0,3)
-    
-	if ( $number -as [int] -gt 7 ) {
-    	echo $script > ./src/cq_examples/test_ex$number.py
-	}
+    $int_number = [int]$number
+    if ( $int_number -gt 7 ) {
+        echo $script > "./src/cq_examples/test_ex$number.py"
+    }
 
 }

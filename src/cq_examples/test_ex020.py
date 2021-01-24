@@ -1,8 +1,8 @@
 import unittest
-import src.cq_examples.Ex019_Counter_Sunk_Holes as ex
+import src.cq_examples.Ex020_Rounding_Corners_with_Fillets as ex
 
-class TestExample019(unittest.TestCase):
-    def test_Ex019(self):
+class TestExample020(unittest.TestCase):
+    def test_Ex020(self):
         # Import and validate
         R = ex.result
         self.assertTrue(R.val().isValid())

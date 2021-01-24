@@ -1,8 +1,8 @@
 import unittest
-import src.cq_examples.Ex012_Creating_Workplanes_on_Faces as ex
+import src.cq_examples.Ex013_Locating_a_Workplane_on_a_Vertex as ex
 
-class TestExample012(unittest.TestCase):
-    def test_Ex012(self):
+class TestExample013(unittest.TestCase):
+    def test_Ex013(self):
         # Import and validate
         R = ex.result
         self.assertTrue(R.val().isValid())
