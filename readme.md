@@ -16,6 +16,7 @@ You need Docker to be installed. Simply clone this repo and use dock
 $ git clone https://github.com/RubenRubens/cq-testing.git
 $ cd cq-testing
 $ docker-compose run passing
+$ docker-compose run failing
 ```
 
 # How it works

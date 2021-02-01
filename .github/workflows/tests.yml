@@ -4,11 +4,13 @@ on:
   push:
     branches: [ master ]
     paths:
-    - 'src/**'
+    - 'failing/**'
+    - 'passing/**'
   pull_request:
     branches: [ master ]
     paths:
-    - 'src/**'
+    - 'failing/**'
+    - 'passing/**'
 
   workflow_dispatch:
 
@@ -25,7 +27,7 @@ jobs:
       - name: Tests 🧪
         run: docker-compose run passing
 
-  all-tests:
+  failing-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,4 +37,4 @@ jobs:
         run: docker login docker.pkg.github.com -u RubenRubens -p ${{ secrets.DockerToken }}
 
       - name: Tests 🧪
-        run: docker-compose run all
+        run: docker-compose run failing
