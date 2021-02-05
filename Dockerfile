@@ -4,6 +4,7 @@ RUN conda install conda-build
 RUN apt-get install -y git
 WORKDIR /
 RUN git clone https://github.com/cadquery/cadquery.git
+RUN git pull origin master
 WORKDIR /cadquery
 RUN conda env create -n cq -f environment.yml
 RUN echo "source activate cq" > ~/.bashrc
