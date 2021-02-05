@@ -22,3 +22,4 @@ jobs:
         registry: docker.pkg.github.com
         repository: rubenrubens/cq-testing/cq
         tag_with_ref: false
+        no-cache: true
