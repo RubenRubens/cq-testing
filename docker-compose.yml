@@ -1,12 +1,12 @@
 version: "3.9"
 services:
   failing:
-    image: docker.pkg.github.com/rubenrubens/cq-testing/cq
+    image: ghcr.io/rubenrubens/cq-testing:demo
     volumes:
     - .:/testing
     command: bash failing.sh
   passing:
-    image: docker.pkg.github.com/rubenrubens/cq-testing/cq
+    image: ghcr.io/rubenrubens/cq-testing:demo
     volumes:
     - .:/testing
     command: bash passing.sh

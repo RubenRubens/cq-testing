@@ -26,5 +26,4 @@ using unittest with a timeout of 60 seconds. This way, any code is 
 classified on two categories: passing and all.
 
 Tests are run using a custom Docker image. The provided dockerfile first clones the cadquery repo
-and then installs a developer cadquery version (`conda env create -n cq -f environment.yml`). This
-docker image is automatically updated every Monday and upload as a github Package.
+and then installs a developer cadquery version (`conda env create -n cq -f environment.yml`).

@@ -4,8 +4,8 @@
 name: Update docker image
 
 on:
-  schedule:
-    - cron: '0 0 * * 1'
+  # schedule:
+  #   - cron: '0 0 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -18,8 +18,8 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         username: ${{ github.actor }}
-        password: ${{ secrets.DockerToken }}
-        registry: docker.pkg.github.com
-        repository: rubenrubens/cq-testing/cq
+        password: ${{ secrets.GHCR }}
+        registry: ghcr.io
+        repository: rubenrubens/cq-testing
         tag_with_ref: false
         no-cache: true
