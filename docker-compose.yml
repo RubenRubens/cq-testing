@@ -3,10 +3,10 @@ services:
   failing:
     image: ghcr.io/rubenrubens/cq-testing:demo
     volumes:
-    - .:/testing
+    - .:/testing:z
     command: bash failing.sh
   passing:
     image: ghcr.io/rubenrubens/cq-testing:demo
     volumes:
-    - .:/testing
+    - .:/testing:z
     command: bash passing.sh
