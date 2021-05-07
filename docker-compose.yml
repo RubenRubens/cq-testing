@@ -1,12 +1,12 @@
 version: "3.9"
 services:
   failing:
-    image: ghcr.io/rubenrubens/cq-testing:demo
+    image: ghcr.io/rubenrubens/cq-conda
     volumes:
-    - .:/testing:z
+    - .:/cadquery:z
     command: bash failing.sh
   passing:
-    image: ghcr.io/rubenrubens/cq-testing:demo
+    image: ghcr.io/rubenrubens/cq-conda
     volumes:
-    - .:/testing:z
+    - .:/cadquery:z
     command: bash passing.sh
