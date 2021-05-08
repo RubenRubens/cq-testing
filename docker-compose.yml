@@ -10,3 +10,8 @@ services:
     volumes:
     - .:/cadquery:z
     command: bash passing.sh
+  single_test:
+    image: ghcr.io/rubenrubens/cq-conda
+    volumes:
+    - .:/cadquery:z
+    command: bash single_test.sh
